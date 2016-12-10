@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="/static/css/materialicon.css">
+    <link rel="stylesheet" href="/static/css/materialize.css">
+    <style>
+        .font_show{
+            font-family: 'Microsoft YaHei UI'
+        }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper light-blue">
+    <a href="#" class="brand-logo font_show"><h4>阳台蔬菜</h4></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/myinfo"><i class="mdi-action-perm-contact-cal"></i></a></li>
+      <li><a href="/talk/"><i class="mdi-social-notifications-paused"></i></a></li>
+      <li><a href="#">注销</a></li>
+    </ul>
+    </div>
+  </nav>
+  <div class="container" style="margin-top:5%">
+    <ul class="collection">
+        <li class="collection-item avatar">
+            <img src="/static/img/1.jpg" alt="" class="circle">
+            <span class="title">{{ goods.0.goodName }}</span>
+            <p>数目:{{ goods.0.goodNumber }}&emsp;&emsp;&emsp;&emsp;价格:{{ goods.0.goodPrice }}&emsp;&emsp;简略信息...</p>
+            <a href="/goodinfo/?goodID=1" class="secondary-content">我要购买</a>
+        </li>
+        <li class="collection-item avatar">
+            <img src="/static/img/2.jpg" alt="" class="circle">
+            <span class="title">{{ goods.1.goodName }}</span>
+            <p>数目:{{ goods.1.goodNumber }}&emsp;&emsp;&emsp;&emsp;价格:{{ goods.1.goodPrice }}&emsp;&emsp;简略信息...</p>
+            <a href="/goodinfo/?goodID=1" class="secondary-content">我要购买</a>
+        </li>
+        <li class="collection-item avatar">
+            <img src="/static/img/3.jpg" alt="" class="circle">
+            <span class="title">{{ goods.2.goodName }}</span>
+            <p>数目:{{ goods.2.goodNumber }}&emsp;&emsp;&emsp;&emsp;价格:{{ goods.2.goodPrice }}&emsp;&emsp;简略信息...</p>
+            <a href="/goodinfo/?goodID=1" class="secondary-content">我要购买</a>
+        </li>
+        <li class="collection-item avatar">
+            <img src="/static/img/4.jpg" alt="" class="circle">
+            <span class="title">{{ goods.3.goodName }}</span>
+            <p>数目:{{ goods.3.goodNumber }}&emsp;&emsp;&emsp;&emsp;价格:{{ goods.3.goodPrice }}&emsp;&emsp;简略信息...</p>
+            <a href="/goodinfo/?goodID=1" class="secondary-content">我要购买</a>
+        </li>
+        <li class="collection-item avatar">
+            <img src="/static/img/5.jpg" alt="" class="circle">
+            <span class="title">{{ goods.4.goodName }}</span>
+            <p>数目:{{ goods.4.goodNumber }}&emsp;&emsp;&emsp;&emsp;价格:{{ goods.4.goodPrice }}&emsp;&emsp;简略信息...</p>
+            <a href="/goodinfo/?goodID=1" class="secondary-content">我要购买</a>
+        </li>
+   </ul>
+  </div>
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large mdi-action-add-shopping-cart"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
+      <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
+      <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
+    </ul>
+  </div>
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/materialize.min.js"></script>
+</html>

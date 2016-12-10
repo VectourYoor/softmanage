@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="/static/css/materialize.css">
+    <link rel="stylesheet" href="/static/css/materialicon.css">
+    <style>
+        .font_show{
+            font-family: 'Microsoft YaHei UI'
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="slider fullscreen" style="position: absolute;">
+        <ul class="slides">
+            <li>
+                <img src="/static/img/3.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h2 class="font_show">阳台蔬菜</h2>
+                    <h4 class="light grey-text text-lighten-3 font_show">就是这么新鲜</h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col s6 offset-s3">
+
+            <div style="position: relative; z-index: 2; top: 310px;" class="card-panel z-depth-2">
+                <form action="/index/" method="post">
+                    <div class="row">
+                        <div class="input-field col s12 ">
+                            <i class="mdi-action-account-circle prefix"></i>
+                            <input type="text" class="validate" id="username" name="username" value="root">
+                            <label for="username">username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 ">
+                            <i class="mdi-action-lock-outline prefix"></i>
+                            <input type="password" class="validate" id="password" name="password" value="123456">
+                            <label for="password">password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <button class="btn col s2 offset-s3 font_show" type="submit">登录</button>
+                            <button class="btn col s2 offset-s2 font_show" type="reset">注册</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slider({full_width: true,interval: 2000});
+    })
+</script>
+</html>

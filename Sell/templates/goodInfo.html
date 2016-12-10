@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>商品信息</title>
+    <link rel="stylesheet" href="/static/css/materialicon.css">
+    <link rel="stylesheet" href="/static/css/materialize.css">
+    <script src="/static/js/echarts.common.min.js"></script>
+
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper light-blue">
+        <a href="#" class="brand-logo font_show"><h4>阳台蔬菜</h4></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/myinfo"><i class="mdi-action-perm-contact-cal"></i></a></li>
+            <li><a href="/talk/"><i class="mdi-social-notifications-paused"></i></a></li>
+            <li><a href="#">注销</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div >
+        <div class="row">
+            <div class="col m5">
+                <div class="card light-green lighten-1">
+                    <div class="card-image">
+                        <img src="/static/img/2.jpg" style="height: 357px;">
+                        <span class="card-title">蔬菜名</span>
+                    </div>
+                    <div class="card-content">
+                        <p>蔬菜简介    数目    价格</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn waves-effect waves-light blue" type="submit" name="action">选择
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                        <button class="btn waves-effect waves-light red" type="submit" name="action">加入购物车
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col m7 card">
+                <div id="main" style="width: 500px;height:300px; margin-left:5%"></div>
+                <div id="chart" style="width: 500px;height:265px; margin-left:5%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+        <i class="large mdi-action-add-shopping-cart"></i>
+    </a>
+    <ul>
+        <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
+        <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
+        <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
+    </ul>
+</div>
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/materialize.min.js"></script>
+<script language="JavaScript">
+    var myChart = echarts.init(document.getElementById("main"));
+    var option = {
+        title: {
+            text: "蔬菜高度"
+        },
+        legend: {
+            data:['高度']
+        },
+        xAxis: {
+            data: ["12号","13号","14号","15号","16号","17号"]
+        },
+        yAxis: {},
+        series: [{
+            name: '高度',
+            type: 'bar',
+            data: [5, 10, 12, 15, 17, 20]
+        }]
+    };
+    myChart.setOption(option);
+    var myChart1 = echarts.init(document.getElementById("chart"));
+    var option1 = {
+        series : [
+            {
+                name: '环境参数',
+                type: 'pie',
+                radius: '55%',
+                roseType: 'angle',
+                data:[
+                    {value:235, name:'温度'},
+                    {value:274, name:'湿度'},
+                    {value:310, name:'土壤'},
+                    {value:335, name:'水分'},
+                    {value:400, name:'空气'}
+                ]
+            }
+        ]
+    };
+    myChart1.setOption(option1);
+</script>
+</html>
